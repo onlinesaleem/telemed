@@ -1,0 +1,9 @@
+.spacer{
+    flex: 1 1 auto;
+}
+.mat-elevation-z5{
+    position :relative;
+
+    z-index: 2;
+
+}

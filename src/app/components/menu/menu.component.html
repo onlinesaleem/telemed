@@ -1,0 +1,17 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list color="primary">
+      <a  mat-list-item class="menulist">Doctors</a>
+      <a mat-list-item class="menulist">Pharmacy</a>
+      <a mat-list-item class="menulist">Diagnostics</a>
+
+    </mat-nav-list>
+  
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p style="height:88vh">
+      <router-outlet></router-outlet>
+    </p>
+  </mat-sidenav-content>
+  </mat-sidenav-container>

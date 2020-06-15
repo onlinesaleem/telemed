@@ -1,0 +1,20 @@
+<div class="detail-section">
+    <div class="container-fluid">
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Dr.{{doctors.docEngname}}</mat-card-title>
+    </mat-card-header>
+      <img src="{{doctors.imageUrl}}" class="detail-img">
+      
+      <div class="price">{{doctors.consPrice | currency: 'SA'}}</div>
+      <a href="#" class="primary-btn">Add to cart</a>
+      <hr>
+      <mat-card-content>
+      <h4>Qualification & Experience</h4>
+      <p>{{ doctors.description}}</p>
+    </mat-card-content>
+    </mat-card>
+
+      <a routerLink="/doctor" class="mt-5">Back to Doctor List</a>
+    </div>
+</div>

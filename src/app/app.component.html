@@ -1,0 +1,47 @@
+<!--Header component start here-->
+
+
+<mat-toolbar color="primary" class="mat-elevation-z5">
+    
+    <mat-toolbar-row>
+      <mat-icon>eco</mat-icon><a routerLink='/welcome'> NMC</a>
+      <span class="spacer" > </span>
+    <button mat-button>  <mat-icon>home</mat-icon></button>
+      <a mat-button>Aboutus</a>
+      <a mat-raised-button color="accent">Sign In</a>
+  </mat-toolbar-row>
+  
+    </mat-toolbar>
+ 
+
+<!--Header component end here-->
+
+  <!--Side navigation menu start here-->
+
+  <mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list  style="width:200px;">
+      <a routerLink='speciality' mat-list-item style="height:60px;" >Speciality</a>
+      <a routerLink='/doctordesk/' mat-list-item class="menulist" style="height:60px;">Doctor</a>
+      <a routerLink='products' mat-list-item class="menulist" style="height:60px;">Pharmacy</a>
+      <a mat-list-item class="menulist" style="height:60px;">Diagnosis</a>
+      <a routerLink='payment' mat-list-item class="menulist" style="height:60px;">Payment</a>
+
+    </mat-nav-list>
+  
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p style="height:88vh;">
+      <router-outlet></router-outlet>
+    </p>
+  </mat-sidenav-content>
+  </mat-sidenav-container>
+
+<!--Side navigation menu end here-->
+
+
+
+  
+
+  

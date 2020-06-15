@@ -1,0 +1,90 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+          
+          <h1 align="center" class="p-3 mb-2 bg-info text-white">  Appointment & Consultation Booking</h1>
+          
+          <hr>
+  
+           <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <div class="form-group row">
+              <mat-form-field class="example-full-width">
+                <mat-label>Patient's Name</mat-label>
+              <div class="col-sm-10">
+                <input matInput placeholder="Ex.Patient's Name" type="text"  
+                name="patFirstname" [(ngModel)]="appointment.patFirstname" >
+                          </div>
+            </mat-form-field>
+            </div>
+  
+            <fieldset class="form-group">
+              <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value=1 
+                    name="gender" checked [(ngModel)]="appointment.gender" >
+                    <label class="form-check-label" for="gridRadios1">
+                      Male
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value=2 
+                    name="gender" [(ngModel)]="appointment.gender" >
+                    <label class="form-check-label" for="gridRadios2">
+                      Female
+                    </label>
+                  </div>
+                
+                </div>
+              </div>
+            </fieldset>
+  
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Reason for Consultation</label>
+              <div class="col-sm-10">
+                <textarea class="form-control"  name="address" [(ngModel)]="appointment.reasonVisit" ></textarea>
+              </div>
+            </div>
+  
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Address</label>
+              <div class="col-sm-10">
+                <textarea class="form-control"  name="address" [(ngModel)]="appointment.address" ></textarea>
+              </div>
+            </div>
+  
+  
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Mobile Number</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="mobile" [(ngModel)]="appointment.mobile" > 
+              </div>
+            </div>
+  
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" name="email" [(ngModel)]="appointment.email" >
+              </div>
+            </div>
+           
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Appointment Date & Time</label>
+              <div class="col-sm-10">
+                <input type="datetime-local" class="form-control" name="appointmentDatetime" [(ngModel)]="appointment.appointDatetime" >
+              </div>
+            </div>
+            
+        
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" [disabled]="!userForm.form.valid" 
+                class="btn btn-info">Submit</button>
+              </div>
+            </div>
+          </form>
+  
+  </div>
+    </div>
+    </div>

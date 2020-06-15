@@ -1,0 +1,49 @@
+
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <h1 style="text-align:center;color: blue;"> Payment(Paytabs) </h1>
+            <hr>
+           
+          
+          <!--<input type="number" [(ngModel)]='finalAmount' > -->
+          
+          <table class="table table-hover" class="table table-bordered">
+            <thead>
+             <tr>
+                 <th scope="col">Consultation fees</th>
+                 <th scope="col">Checkout</th>
+                 
+             </tr>
+         </thead>
+         <tbody>
+        
+            <td><h3 id="amt"> {{finalAmount}}  SAR </h3></td>
+           
+           <td> <div> <button (click)="paymentprocess()" class="btn btn-primary">Paynow</button></div> </td>
+            
+         
+
+         <script type="text/javascript">
+             function Test()
+             {
+                 alert("button cliecked");
+             }
+
+         </script>
+            
+            
+           
+             </tbody>
+       
+         </table>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+

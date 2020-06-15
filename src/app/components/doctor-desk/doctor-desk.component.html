@@ -1,0 +1,38 @@
+
+
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+          
+            <h1 style="text-align:center;color: blue;"> List of appointment</h1>
+            <hr>
+            <table class="table table-hover" class="table table-bordered">
+               <thead>
+                <tr>
+                    <th scope="col">Patient's Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Appointment Date</th>
+                    <th scope="col">Doctor</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let tempappointment of appointment">
+             
+               <td> {{tempappointment.patFirstname}} </td>
+               <td> {{tempappointment.address}} </td>
+               <td> {{tempappointment.email}} </td>
+               <td> {{tempappointment.appointDatetime |  date:'medium' }} </td>
+               <td><a href="https://us04web.zoom.us/join" target="_blank">Video call</a></td>
+                
+                </tr>
+                </tbody>
+          
+            </table>
+  </div>
+    </div>
+    </div>
+
+
+
+

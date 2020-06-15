@@ -1,0 +1,21 @@
+.example-card {
+    max-width: 400px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .example-header-image {
+
+    background-size: cover;
+  }
+
+  .mat-card {
+    background: #467fbb;
+    color: #fff;
+}
+
+  .mat-button{
+      
+      width: 250px;
+      background-color: #f8f9fa;
+  }

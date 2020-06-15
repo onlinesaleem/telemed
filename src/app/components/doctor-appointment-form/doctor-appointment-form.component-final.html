@@ -1,0 +1,246 @@
+<div class="main-content page-m">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <form [formGroup]="appointmentFormGroup" (ngSubmit)="onSubmit()">
+
+        <!---Appointment form group-->
+
+        <div formGroupName="patient" class="form-area">
+          <h3>Patient Details</h3>
+
+          <div class="row">
+            <div class="col-md-2"><label>First Name</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input formControlName="patFirstname" type="text">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-2"><label>Last Name</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input formControlName="patLastname" type="text">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2"><label>Gender</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input type="radio" formControlName="gender" value=1>Male &nbsp;&nbsp;&nbsp;
+                <input type="radio" formControlName="gender" value=2>Female
+                
+              </div>
+            </div>
+
+          </div>
+
+           <div class="row">
+            <div class="col-md-2"><label>Age</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input type="text" formControlName="age" >
+                              
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2"><label>Mobile</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input type="text" formControlName="mobile" >
+                              
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2"><label>Email</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input type="text" formControlName="email" >
+                              
+                
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+    <!--Appointment details-->
+
+
+    
+    <div formGroupName="appointmentBooking" class="form-area">
+      <h3>Appointment Booking</h3>
+
+
+      <div class="row">
+        <div class="col-md-2"><label>Reason for Consultation</label></div>
+        <div class="col-md-9">
+          <div class="input-space">
+            <input formControlName="reasonVisit" type="text">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-2"><label>Appointment Date</label></div>
+        <div class="col-md-9">
+          <div class="input-space">
+            <input formControlName="appointDate" type="text"  placeholder="Datepicker"  [minDate]="minDate"
+            [maxDate]="maxDate" bsDatepicker>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"><label>Appointment Time</label></div>
+        <div class="col-md-9">
+          <div class="input-space">
+          <!--  <timepicker  [min]="minTime" [max]="maxTime" required formControlName="appointTime" ></timepicker> -->
+       <!--     <input type="time" id="appt" name="appt"  min="09:00" max="21:00" required formControlName="appointTime">-->
+
+            <select  formControlName="appointTime" >
+                  
+              <option value=9:00>09:00 AM</option>
+              <option value=9:30>09:30 AM</option>
+              <option value=10:00>10:00 AM</option>
+              <option value=10:30>10:30 AM</option>
+              <option value=11:00>11:00 AM</option>
+              <option value=11:30>11:30 AM</option>
+              <option value=12:00>12:00 PM</option>
+              <option value=12:30>12:30 PM</option>
+              <option value=13:00>01:00 PM</option>
+              <option value=13:30>01:30 PM</option>
+              <option value=14:00>02:00 PM</option>
+              <option value=14:30>02:30 PM</option>
+              <option value=15:00>03:00 PM</option>
+              <option value=15:30>03:30 PM</option>
+              <option value=16:00>04:00 PM</option>
+              <option value=16:30>04:30 PM</option>
+              <option value=17:00>05:00 PM</option>
+              <option value=17:30>05:30 PM</option>
+              <option value=18:00>06:00 PM</option>
+              <option value=18:30>06:30 PM</option>
+              <option value=19:00>07:00 PM</option>
+              <option value=19:30>07:30 PM</option>
+              <option value=20:00>08:00 PM</option>
+              <option value=20:30>08:30 PM</option>
+              <option value=21:00>09:00 PM</option>
+
+              
+            
+              </select>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+
+     
+
+     
+   
+
+
+    <!-- Address details-->
+
+        <div formGroupName="address" class="form-area">
+          <h3>Address Details</h3>
+
+          <div class="row">
+            <div class="col-md-2"><label>Street</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input formControlName="street" type="text">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-2"><label>City</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input formControlName="city" type="text">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2"><label>State</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input type="text" formControlName="state" >
+                
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-2"><label>Zipcode</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input type="text" formControlName="zipcode" >
+                
+              </div>
+            </div>
+
+          </div>
+
+           <div class="row">
+            <div class="col-md-2"><label>Nationality</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <div class="input-space">
+                <select  formControlName="nationality" >
+                  
+                  <option value=1>Saudi Arabia</option>
+                  <option value=2>India</option>
+                
+                  </select>
+
+                </div>        
+                
+              </div>
+            </div>
+          </div>
+
+        
+
+        
+
+   
+
+
+        </div>
+
+
+
+
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-info">Save</button>
+        </div>
+        <!--Submit button-->
+
+      </form>
+    </div>
+  </div>
+</div>

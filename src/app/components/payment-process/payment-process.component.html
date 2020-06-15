@@ -1,0 +1,36 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+    
+          <h1 style="text-align:center;color: blue;"> Payment </h1>
+          <hr>
+          <!--<input type="number" [(ngModel)]='finalAmount' > -->
+          
+          <table class="table table-hover" class="table table-bordered">
+            <thead>
+             <tr>
+                 <th scope="col">Consultation fees</th>
+                 <th scope="col">Checkout</th>
+                 
+             </tr>
+         </thead>
+         <tbody>
+        
+            <td><h3> {{finalAmount}}  SAR </h3></td>
+            <td> <div id="paypal-checkout-btn"><h3>Paynow</h3></div> </td>
+            
+            <link rel="stylesheet" href="https://www.paytabs.com/theme/express_checkout/css/express.css">
+            <script src="https://www.paytabs.com/theme/express_checkout/js/jquery-1.11.1.min.js"></script>
+            <script src="https://www.paytabs.com/express/express_checkout_v3.js"></script>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <!-- Button Code for PayTabs Express Checkout -->
+            <div class="PT_express_checkout"></div>
+           
+            
+             </tbody>
+       
+         </table>
+      
+  </div>
+    </div>
+    </div>
